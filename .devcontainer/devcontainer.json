@@ -1,7 +1,7 @@
 {
   "name": "ESP32 Development Environment",
   "image": "mcr.microsoft.com/devcontainers/python:3.9",
-  "postCreateCommand": "pip install platformio && arduino-cli core install esp32:esp32",
+  "postCreateCommand": "curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh && arduino-cli core update-index && arduino-cli core install esp32:esp32 && pip install platformio",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -16,5 +16,8 @@
         "editor.formatOnSave": true
       }
     }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {}
   }
 }
