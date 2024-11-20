@@ -1,10 +1,19 @@
-
 [wokwi]
 version = 1
-elf = ".pio/build/esp32/firmware.elf"
-firmware = ".pio/build/esp32/firmware.bin"
-
-# Forward HTTP requests from localhost to port 80 on the simulated ESP32
-[[net.forward]]
-from = "localhost:8180"
-to = "target:80"
+elf = ".pio/build/uno/firmware.elf"  # Path to the ELF file
+firmware = ".pio/build/uno/firmware.hex"  # Path to the HEX file
+ 
+[[peripherals]]
+id = "led_red"
+type = "led"
+pin = 4  # Pin connected to the red LED
+ 
+[[peripherals]]
+id = "led_yellow"
+type = "led"
+pin = 3  # Pin connected to the yellow LED
+ 
+[[peripherals]]
+id = "led_green"
+type = "led"
+pin = 2  # Pin connected to the green LED
