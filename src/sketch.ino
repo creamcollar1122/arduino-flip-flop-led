@@ -1,41 +1,29 @@
-
-/* ESP32 WiFi Scanning example */
-
-#include "WiFi.h"
+const int red = 4;
+const int yellow = 3;
+const int green = 2;
 
 void setup() {
-  Serial.begin(115200);
-  Serial.println("Initializing WiFi...");
-  WiFi.mode(WIFI_STA);
-  Serial.println("Setup done!");
+  Serial.begin(9600); 
+  pinMode(red,OUTPUT);
+  pinMode(yellow,OUTPUT);
+  pinMode(green,OUTPUT);
 }
-
 void loop() {
-  Serial.println("Scanning...");
+  digitalWrite(red, HIGH);
+  Serial.println("Red is blink");
+  delay(1000);
+  digitalWrite(red, LOW);
+  
+  digitalWrite(yellow, HIGH);
+  Serial.println("Yellow is blink");
+  delay(1000);
+  digitalWrite(yellow, LOW);
 
-  // WiFi.scanNetworks will return the number of networks found
-  int n = WiFi.scanNetworks();
-  Serial.println("Scan done!");
-  if (n == 0) {
-    Serial.println("No networks found.");
-  } else {
-    Serial.println();
-    Serial.print(n);
-    Serial.println(" networks found");
-    for (int i = 0; i < n; ++i) {
-      // Print SSID and RSSI for each network found
-      Serial.print(i + 1);
-      Serial.print(": ");
-      Serial.print(WiFi.SSID(i));
-      Serial.print(" (");
-      Serial.print(WiFi.RSSI(i));
-      Serial.print(")");
-      Serial.println((WiFi.encryptionType(i) == WIFI_AUTH_OPEN) ? " " : "*");
-      delay(10);
-    }
-  }
-  Serial.println("");
+  digitalWrite(green, HIGH);
+  Serial.println("Green is blink");
+  delay(1000);
+  digitalWrite(green, LOW);
 
-  // Wait a bit before scanning again
-  delay(5000);
+  Serial.println("Loop completed.................");
+  delay(2000);
 }
