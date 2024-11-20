@@ -2,7 +2,7 @@
 version = 1
 elf = ".pio/build/uno/firmware.elf"  # Path to the ELF file
 firmware = ".pio/build/uno/firmware.hex"  # Path to the HEX file
- 
+ license = "${JnU9NDE1MDc4MjI0ODU4MzQyNDAxJm49a2FscGFuYSZlPWluZm8lNDBjcmVhbWNvbGxhci5jb20meD0yMDI0MTIyMADbIyGKabCQAZxPeaIrSbQQVnxRiB3hhW5Q_SrBJQKbERhZrY4nmEGqOUhF3epmL8hk06KgIv0k36vnNKVu4vPtYDjCam2PmsYAVfn1XHJXHq686kp0dQGYHatjCkrzA3_PnyCQ3ivpU4L8tOaXdW6ELzvI22SuhhsPbTCDyBWYHzQXVFWum4wuUAz7AGe5zgm4uNtLfFKN9IbdVgH_PKdV6rtjS6lJBhsAgy6RryZ7Mr0Wp3i5bHfK7bIQIcwr8KRbjMz3CFXunK7eEtCrmtTtzPJOez3Y0qjeFY0tcvCmUQJvBVyl4_PPkGdL0_PL_Pz2BjpiLNESqmG17df7i0FcE924yg}"
 [[peripherals]]
 id = "led_red"
 type = "led"
